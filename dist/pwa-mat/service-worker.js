@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.3d5ab08675ebb3ab72796639c1ad8a68.js"
+  "/precache-manifest.a890aa30eb839460651a34b20fb62e3f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "quasar-firebase-example"});
