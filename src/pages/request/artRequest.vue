@@ -28,7 +28,7 @@
                 </q-field>
 
                 <q-stepper-navigation>
-                    <q-btn :disabled="$v.groupOne.$invalid" color="secondary" @click="$refs.stepper.next()">Continue</q-btn>
+                    <q-btn :disabled="$v.groupOne.$invalid" color="secondary" @click="$refs.stepper.next()">Continuar</q-btn>
                 </q-stepper-navigation>
 
             </q-step>
@@ -44,8 +44,8 @@
                 </q-field>
 
                 <q-stepper-navigation>
-                     <q-btn :disabled="$v.question.$invalid" color="secondary" @click="$refs.stepper.next()">Continue</q-btn>
-                    <q-btn color="secondary" flat @click="$refs.stepper.previous()">Back</q-btn>
+                     <q-btn :disabled="$v.question.$invalid" color="secondary" @click="$refs.stepper.next()">Continuar</q-btn>
+                    <q-btn color="secondary" flat @click="$refs.stepper.previous()">Voltar</q-btn>
                 </q-stepper-navigation>
             </q-step>
 
@@ -123,7 +123,7 @@
             </p>
 
             <q-stepper-navigation>
-                <q-btn :loading="saving" color="secondary" @click="save()">Salvar</q-btn>
+                <q-btn :loading="saving" color="secondary" @click="save()">Solicitar pedido</q-btn>
             </q-stepper-navigation>
             </q-step>
 

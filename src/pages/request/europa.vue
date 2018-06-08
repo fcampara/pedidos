@@ -3,7 +3,7 @@
 
     <q-card class="card-request shadow-9" color="black">
       <q-card-media>
-        <img src="assets/photoUE.jpg">
+        <img src="../../assets/photoUE.jpg">
 
         <q-card-title slot="overlay" class="text-center">
           Request // Marketing EAD // Europa

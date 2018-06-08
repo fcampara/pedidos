@@ -3,7 +3,7 @@
 
     <q-card class="card-request shadow-9" inline color="black">
       <q-card-media>
-        <img src="http://pedidos.ungrn.net/assets/img/photos/photoBR.jpg">
+        <img src="../../assets/photoBR.jpg">
 
         <q-card-title slot="overlay" class="text-center">
           Request // Marketing EAD // Brasil

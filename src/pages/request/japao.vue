@@ -3,7 +3,7 @@
 
     <q-card class="card-request shadow-9" color="black">
       <q-card-media>
-        <img src="assets/photoJP.jpg">
+        <img src="../../assets/photoJP.jpg">
         <q-card-title slot="overlay" class="text-center">
           Request // Marketing EAD // Japão
           <span slot="subtitle">Seleciona abaixo qual o tipo de Solicitação:</span>
