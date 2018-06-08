@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-   
+
     <q-card class="card-request shadow-9" inline color="black">
       <q-card-media>
         <img src="http://pedidos.ungrn.net/assets/img/photos/photoBR.jpg">
@@ -15,7 +15,7 @@
         <q-btn @click="redirect(2)">Matéria para Imprensa</q-btn>
       </q-card-actions>
     </q-card>
-    
+
   </q-page>
 </template>
 <script>
@@ -23,7 +23,7 @@ export default {
   name: 'RequestBrasil',
   methods: {
     redirect (type) {
-      this.$router.push({path: 'artRequest', query: { from: 'brasil', type: type} })
+      this.$router.push({ path: 'artRequest', query: { from: 'brasil', type: type } })
     }
   }
 }

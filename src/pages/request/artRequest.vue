@@ -146,7 +146,7 @@ export default {
       info: {
         fullName: '',
         email: '',
-        phone: '',
+        phone: ''
       },
       note: '',
       step: 'first',
@@ -155,19 +155,19 @@ export default {
   },
   validations: {
     info: {
-        fullName: { required },
-        email: { required, email },
-        phone: { required },
+      fullName: { required },
+      email: { required, email },
+      phone: { required }
     },
     question: {
-        required,
-        $each:{
-            answer: {
-                required
-            }
+      required,
+      $each: {
+        answer: {
+          required
         }
+      }
     },
-    groupOne: ['info.fullName','info.email','info.phone'],
+    groupOne: ['info.fullName', 'info.email', 'info.phone']
   },
   methods: {
     log () {
@@ -186,15 +186,16 @@ export default {
 
       await collection.doc().set(data).then(() => {
         this.showNotification('Salvo com sucesso', 1)
-      }).catch(error => 
+      }).catch(error => {
+        console.error(error)
         this.showNotification('Ops! Ocorreu um erro, tente novamente', 0)
-      )
+      })
     },
-    showNotification (message,type) {
+    showNotification (message, type) {
       this.saving = false
       const color = type === 1 ? 'positive' : 'negative'
       const icon = type === 1 ? 'thumb_up' : 'thumb_down'
-      this.$q.notify({ message: message,  icon: icon, color: color, position: 'bottom', timeout: 1500})
+      this.$q.notify({ message: message, icon: icon, color: color, position: 'bottom', timeout: 1500 })
       this.$router.push('home')
     }
   }

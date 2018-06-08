@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-   
+
     <q-card class="card-request shadow-9" color="black">
       <q-card-media>
         <img src="assets/photoUE.jpg">
@@ -14,7 +14,7 @@
         <q-btn @click="redirect(1)">Solicitação de arte</q-btn>
       </q-card-actions>
     </q-card>
-    
+
   </q-page>
 </template>
 <script>
@@ -22,7 +22,7 @@ export default {
   name: 'RequestEuropa',
   methods: {
     redirect (type) {
-      this.$router.push({path: 'artRequest', query: { from: 'europa', type: type} })
+      this.$router.push({ path: 'artRequest', query: { from: 'europa', type: type } })
     }
   }
 }
