@@ -1,0 +1,80 @@
+<template>
+<transition appear enter-active-class="animated flipInY" leave-active-class="animated flipOutY">
+  <q-page class="flex flex-center">
+    <q-card class="card-sign-in q-pa-md shadow-9" inline color="white">
+      <q-card-media class="q-pa-md">
+        <img src="" />
+      </q-card-media>
+
+      <q-card-title class="text-dark text-center">
+        Sign in to your account
+      </q-card-title>
+
+      <form @submit.prevent="register()">
+        <q-card-main>
+          <q-field icon="email" icon-color="light" class="q-mt-md">
+            <q-input placeholder="Email Address" v-model.trim="form.email" type="email" autocomplete="username"
+            @blur="$v.form.email.$touch" :error="$v.form.email.$error"
+            />
+          </q-field>
+
+          <q-field icon="lock" icon-color="light" class="q-mt-lg">
+            <q-input placeholder="Password" v-model="form.password" type="password" autocomplete="current-password"/>
+          </q-field>
+
+          <q-field icon="lock" icon-color="light" class="q-mt-lg">
+            <q-input placeholder="Repeat Password" v-model="form.repeatPassword" type="password" autocomplete="current-password"/>
+          </q-field>
+        </q-card-main>
+
+        <q-card-actions align="center" class="q-mt-lg">
+          <q-btn label="Sign In" color="primary" size="large" type="submit"/>
+        </q-card-actions>
+      </form>
+
+    </q-card>
+
+  </q-page>
+</transition>
+</template>
+
+<script>
+import { required, email, sameAs, minLength } from 'vuelidate/lib/validators'
+
+export default {
+  name: 'PageSignIn',
+  data () {
+    return {
+      form: {
+        email: '',
+        password: '',
+        repeatPassword: ''
+      }
+    }
+  },
+  validations: {
+    form: {
+      email: { required, email },
+      password: { required, minLength: minLength(6) },
+      repeatPassword: { sameAsPassword: sameAs('password') }
+    }
+  },
+  methods: {
+    register () {
+      let credentials = {
+        email: this.form.email,
+        password: this.form.password
+      }
+
+      this.$store.dispatch('auth/register', credentials)
+        .then(user => {
+          this.$router.replace({ name: 'dashboard' })
+        })
+        .catch(error => {
+          this.$q.notify('Invalid Login!')
+          console.error(`Not signed in: ${error.message}`)
+        })
+    }
+  }
+}
+</script>

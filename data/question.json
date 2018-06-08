@@ -1,0 +1,38 @@
+[
+    {
+        "index": "0",
+        "question": "1 - Qual peça será criada? e Qual o objetivo da mesma?",
+        "help": "Devemos explicar como serão as peças para esse job; por exempo: se é um banner para Google Display, se é um banner físico, um folheto, um outdoor ou até um post para redes sociais, etc.",
+        "answer": ""
+    },
+    {
+        "index": "1",
+        "question": "2 - Qual campanha a peça se refere?",
+        "help": "É importantíssimo que a Criação saiba de qual campanha a peça se refere, para poder seguir a mesma comunicação que foi definida em todas as peças da campanha. 'Exemplo vestibular 2018'",
+        "answer": ""
+    },
+    {
+        "index": "2",
+        "question": "3- Qual o formato e tamanho da peça?",
+        "help": "O tamanho da peça a ser feita é essencial. A Criação precisa saber qual o espaço que ela tem para colocar todas as informações que o Atendimento está solicitando. Por exemplo: para fazer uma arte para redes sociais, devemos nos atentar para os 20% de texto na imagem, acima disso, o Facebook não irá aprovar o anúncio.",
+        "answer": ""
+    },
+    {
+        "index": "3",
+        "question": "4 - Passe uma ideia da peça.",
+        "help": "É importante dizer aqui se a Criação deve seguir uma ideia de peça já definida (cores, texto, formato) ou se a criação é livre. Muitas vezes o Atendimento e o cliente não tem ideia da peça e isso pode ser discutido junto com a Criação.",
+        "answer": ""
+    },
+    {
+        "index": "4",
+        "question": "5 - Texto e informações necessárias na peça.",
+        "help": "O Atendimento deve passar todas as informações que devem conter na peça, como logomarca, preços, telefones, assim como deve saber se alguma informação deve chamar mais atenção que outra. Isso precisa ser dito para a Criação saber como fazer a diagramação.",
+        "answer": ""
+    },
+    {
+        "index": "5",
+        "question": "6 - O que não pode conter na peça.",
+        "help": "Se tiver algum ícone, imagem ou informação que não pode aparecer de jeito nenhum na peça. Informe para a Criação. Por exemplo: não pode utilizar a cor rosa ou roxa, não deve conter splashs ou fotos de banco de imagem, etc.",
+        "answer": ""
+    }
+]
