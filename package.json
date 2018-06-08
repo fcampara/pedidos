@@ -7,6 +7,9 @@
   "author": "Steve Clarke <steve@sevenview.ca>",
   "private": true,
   "scripts": {
+    "build": "quasar build -m pwa",
+    "start": "node server.js",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev"
