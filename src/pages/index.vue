@@ -71,11 +71,9 @@ export default {
       let collection = this.$firebase.firestore().collection('todos')
 
       seedData.forEach(todo => {
-        collection.doc().set(todo)
-          .then(() => {
-            console.log('Created', todo.title)
-            })
-          .catch(error => console.error(error))
+        collection.doc().set(todo).then(() => {
+          console.log('Created', todo.title)
+        }).catch(error => console.error(error))
       })
 
       this.getData()

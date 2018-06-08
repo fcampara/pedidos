@@ -19,11 +19,11 @@
 </template>
 <script>
 export default {
-    name: 'RequestEuropa',
-    methods: {
-        redirect (type) {
-            this.$router.push({path: 'artRequest', query: { from: 'europa', type: type} });
-        }
+  name: 'RequestEuropa',
+  methods: {
+    redirect (type) {
+      this.$router.push({path: 'artRequest', query: { from: 'europa', type: type} })
     }
+  }
 }
 </script>

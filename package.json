@@ -12,7 +12,7 @@
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "quasar dev"
+    "dev": "quasar dev -m pwa"
   },
   "dependencies": {
     "axios": "^0.18.0",

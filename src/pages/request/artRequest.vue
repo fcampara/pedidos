@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-   
+
     <q-card class="card-request shadow-9" inline color="">
         <q-stepper ref="stepper" color="secondary" v-model="step" alternative-labels vertical>
             <q-step default name="info" title="Suas informações">
@@ -116,7 +116,7 @@
 
             <q-step name="finish" title="Finalizar">
             <p>
-                Lembrando que você é responsável por conseguir passar tudo de forma clara e detalhada. 
+                Lembrando que você é responsável por conseguir passar tudo de forma clara e detalhada.
                 Com essas informações a Criação pode executar todo o job seguindo os itens respondidos anteriormente.
                 A entrega do job ocorrerá a partir de três dias após o envio destas informações, com retorno via e-mail.
                 A equipe de MARKETING da UNIGRAN NET agradece sua cooperação!
@@ -130,7 +130,7 @@
         <q-inner-loading/>
       </q-stepper>
     </q-card>
-    
+
   </q-page>
 </template>
 <script>
@@ -138,65 +138,65 @@ import { required, email } from 'vuelidate/lib/validators'
 import question from '../../../data/question'
 
 export default {
-    name: 'RequestArt',
-    data () {
-        return {
-            saving: false,
-            question,
-            info: {
-                fullName: '',
-                email: '',
-                phone: '',
-            },
-            note: '',
-            step: 'first',
-            details: []
-        }
-    },
-    validations: {
-        info: {
-            fullName: { required },
-            email: { required, email },
-            phone: { required },
-        },
-        question: {
-            required,
-            $each:{
-                answer: {
-                    required
-                }
-            }
-        },
-        groupOne: ['info.fullName','info.email','info.phone'],
-    },
-    methods: {
-        log () {
-            console.log(this.question)
-        },
-        async save () {
-            this.saving = true
-            const data = {
-                type: this.$route.query.type,
-                from: this.$route.query.from,
-                info: this.info,
-                question: this.question,
-                note: this.note
-            }
-            let collection = this.$firebase.firestore().collection('request')
-
-            await collection.doc().set(data).then(() => {
-                this.showNotification('Salvo com sucesso', 1)
-            }).catch(error => 
-                this.showNotification('Ops! Ocorreu um erro, tente novamente', 0)
-            )
-        },
-        showNotification (message,type) {
-            this.saving = false
-            const color = type === 1 ? 'positive' : 'negative'
-            const icon = type === 1 ? 'thumb_up' : 'thumb_down'
-            this.$q.notify({ message: message,  icon: icon, color: color, position: 'bottom', timeout: 1500})
-            this.$router.push("home")
-        }
+  name: 'RequestArt',
+  data () {
+    return {
+      saving: false,
+      question,
+      info: {
+        fullName: '',
+        email: '',
+        phone: '',
+      },
+      note: '',
+      step: 'first',
+      details: []
     }
+  },
+  validations: {
+    info: {
+        fullName: { required },
+        email: { required, email },
+        phone: { required },
+    },
+    question: {
+        required,
+        $each:{
+            answer: {
+                required
+            }
+        }
+    },
+    groupOne: ['info.fullName','info.email','info.phone'],
+  },
+  methods: {
+    log () {
+      console.log(this.question)
+    },
+    async save () {
+      this.saving = true
+      const data = {
+        type: this.$route.query.type,
+        from: this.$route.query.from,
+        info: this.info,
+        question: this.question,
+        note: this.note
+      }
+      let collection = this.$firebase.firestore().collection('request')
+
+      await collection.doc().set(data).then(() => {
+        this.showNotification('Salvo com sucesso', 1)
+      }).catch(error => 
+        this.showNotification('Ops! Ocorreu um erro, tente novamente', 0)
+      )
+    },
+    showNotification (message,type) {
+      this.saving = false
+      const color = type === 1 ? 'positive' : 'negative'
+      const icon = type === 1 ? 'thumb_up' : 'thumb_down'
+      this.$q.notify({ message: message,  icon: icon, color: color, position: 'bottom', timeout: 1500})
+      this.$router.push('home')
+    }
+  }
 }
 </script>
