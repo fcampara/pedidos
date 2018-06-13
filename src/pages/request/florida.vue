@@ -3,7 +3,7 @@
 
     <q-card class="card-request shadow-9" inline color="black">
       <q-card-media>
-        <img src="../../assets/photoEUA.jpg">
+        <img src="../../assets/flag/photoEUA.jpg">
         <q-card-title slot="overlay" class="text-center">
           Request // Marketing EAD // Flórida
           <span slot="subtitle">Seleciona abaixo qual o tipo de Solicitação:</span>
@@ -22,7 +22,7 @@ export default {
   name: 'RequestFlorida',
   methods: {
     redirect (type) {
-      this.$router.push({ path: 'artRequest', query: { from: 'flórida', type: type } })
+      this.$router.push({ path: 'artRequest', query: { from: 'Flórida', type: type } })
     }
   }
 }

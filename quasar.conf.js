@@ -9,7 +9,8 @@ module.exports = function (ctx) {
       'firebase',
       'boot',
       'vuelidate',
-      'vue-the-mask'
+      'vue-the-mask',
+      'vue-clipboards'
     ],
     css: [
       'app.styl'
@@ -50,6 +51,14 @@ module.exports = function (ctx) {
     framework: {
       i18n: 'pt-br',
       components: [
+        'QBtnGroup',
+        'QCollapsible',
+        'QTd',
+        'QChip',
+        'QTr',
+        'QTh',
+        'QCheckbox',
+        'QTable',
         'QEditor',
         'QPopover',
         'QStepper',
@@ -89,7 +98,8 @@ module.exports = function (ctx) {
       ],
       // Quasar plugins
       plugins: [
-        'Notify'
+        'Notify',
+        'Dialog'
       ],
       iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
     },

@@ -19,11 +19,18 @@
                     />
                 </q-field>
 
-                <q-field error-label="Campo obrigatório" :error="$v.info.phone.$error">
-                    <q-input class="q-mt-md"  v-model.trim="info.phone" float-label="Telefone ou Celular"
-                        v-mask="['(##) ####-####', '(##) #####-####']"
+                <q-field :error="$v.info.phone.$error" error-label="Campo obrigatório">
+                    <q-input class="q-mt-md" v-model.trim="info.phone" float-label="Telefone ou Celular"
+                        v-mask="['+## (##) ####-####', '+## (##) #####-####']"
                         @blur="$v.info.phone.$touch"
                         :error="$v.info.phone.$error"
+                    />
+                </q-field>
+
+                <q-field error-label="Campo obrigatório" :error="$v.info.polo.$error">
+                    <q-input class="q-mt-md" v-model.trim="info.polo" float-label="Polo"
+                        @blur="$v.info.polo.$touch"
+                        :error="$v.info.polo.$error"
                     />
                 </q-field>
 
@@ -141,12 +148,14 @@ export default {
   name: 'RequestArt',
   data () {
     return {
+      protocolo: '',
       saving: false,
       question,
       info: {
         fullName: '',
         email: '',
-        phone: ''
+        phone: '',
+        polo: ''
       },
       note: '',
       step: 'first',
@@ -157,7 +166,8 @@ export default {
     info: {
       fullName: { required },
       email: { required, email },
-      phone: { required }
+      phone: { required },
+      polo: { required }
     },
     question: {
       required,
@@ -167,7 +177,7 @@ export default {
         }
       }
     },
-    groupOne: ['info.fullName', 'info.email', 'info.phone']
+    groupOne: ['info.fullName', 'info.email', 'info.phone', 'info.polo']
   },
   methods: {
     log () {
@@ -175,29 +185,43 @@ export default {
     },
     async save () {
       this.saving = true
+      this.protocolo = Date.now()
       const data = {
-        type: this.$route.query.type,
-        from: this.$route.query.from,
         info: this.info,
+        note: this.note,
         question: this.question,
-        note: this.note
+        protocolo: this.protocolo.toString(),
+        from: this.$route.query.from,
+        type: this.$route.query.type,
+        finish: false
       }
-      let collection = this.$firebase.firestore().collection('request')
 
-      await collection.doc().set(data).then(() => {
-        this.showNotification('Salvo com sucesso', 1)
+      this.$store.dispatch('request/saveRequest', data).then(request => {
+        console.log('Salvo com sucesso!')
+        this.showNotification(1)
       }).catch(error => {
+        this.showNotification(0)
         console.error(error)
-        this.showNotification('Ops! Ocorreu um erro, tente novamente', 0)
       })
     },
-    showNotification (message, type) {
+    showNotification (type) {
       this.saving = false
-      const color = type === 1 ? 'positive' : 'negative'
-      const icon = type === 1 ? 'thumb_up' : 'thumb_down'
-      this.$q.notify({ message: message, icon: icon, color: color, position: 'bottom', timeout: 1500 })
-      this.$router.push('home')
+      if (type === 0) {
+        this.$q.notify({ message: 'Erro ao salvar, tente novamente', icon: 'thumb_down', color: 'positive', position: 'bottom', timeout: 1500 })
+      } else {
+        this.$q.dialog({
+          title: 'Salvo com sucesso',
+          message: `O seu número de protocolo é ${this.protocolo}`,
+          color: 'positive',
+          ok: true
+        }).then(() => {
+          this.$router.push('home')
+        })
+      }
     }
+  },
+  mounted () {
+
   }
 }
 </script>

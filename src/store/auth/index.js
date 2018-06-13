@@ -19,8 +19,7 @@ export default {
 
   mutations: {
     SET_USER (state, payload) {
-      let user = payload
-      state.user = user
+      state.user = payload
     },
 
     RESET_USER (state) {

@@ -1,83 +1,104 @@
 <template>
   <q-page padding>
-
-    <div v-if="loading">
-      <q-spinner /> Fetching data...
-    </div>
-
-    <div v-else>
-      <q-list>
-        <q-list-header>Todos</q-list-header>
-        <q-item
-          v-for="(todo, index) in todos"
-          :key="index"
-        >
-          <q-item-main>
-            {{ todo.title }}
-          </q-item-main>
-        </q-item>
-      </q-list>
-    </div>
-
-    <q-btn
-      v-if="!todos.length && !loading"
-      label="Seed Data"
-      color="tertiary"
-      class="q-mt-md"
-      @click="seedData()"
-    />
-
+  <q-list separator class="shadow-24">
+      <q-collapsible v-for="request in requests" :key="request.protocolo"
+        :label="getLabel(request)" :sublabel="getSubLabel(request)" :avatar="getAvatar(request)">
+        <q-card class="shadow-4">
+          <q-card-title class="text-center">
+            Solicitado em {{dateTime(request.protocolo)}}
+            <span slot="subtitle">
+              <q-btn-group push class="full-width q-mt-md">
+                <q-btn v-clipboard="onCopyAction(request)" @success="handleSuccess" push color="primary" class="full-width" icon="file_copy" label="Copiar"/>
+                <q-btn @click="finish(request)" push color="positive" :disable="request.finish" class="full-width" icon="check" label="Finalizar"/>
+                <q-btn push color="negative" :disable="request.finish" class="full-width" icon="close" label="Cancelar"/>
+              </q-btn-group>
+            </span>
+          </q-card-title>
+          <q-list separator>
+            <q-collapsible class="ellipsis" v-for="question in request.question" :key="question.index" :label="question.question">
+              <div>
+                {{question.answer}}
+              </div>
+            </q-collapsible>
+            <q-collapsible v-if="request.note" label="Observação">
+              <div v-html="request.note"/>
+            </q-collapsible>
+          </q-list>
+        </q-card>
+      </q-collapsible>
+    </q-list>
   </q-page>
 </template>
-
-<style>
-</style>
-
 <script>
-import seedData from '../../data/todos'
+import { date } from 'quasar'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'PageIndex',
-
   data () {
     return {
-      loading: true,
+      copyData: 'teste',
+      selected: [],
       todos: []
     }
   },
-
-  created () {
-    this.getData()
+  computed: {
+    ...mapState({
+      requests: state => state.request.requests
+    })
   },
-
   methods: {
-    getData () {
-      this.loading = true
-      this.todos = []
-
-      let collection = this.$firebase.firestore().collection('todos')
-
-      collection.get()
-        .then(querySnapshot => {
-          querySnapshot.forEach(todo => {
-            this.todos.push(todo.data())
-          })
-          this.loading = false
-        })
-        .catch(error => console.error(error))
+    ...mapActions({
+      'getAllRequests': 'request/getAllRequests',
+      'finish': 'request/finish'
+    }),
+    handleSuccess () {
+      this.$q.notify({message: 'Copiado com sucesso', timeout: 2000, type: 'positive', color: 'positive'})
     },
+    getAvatar (request) {
+      if (request.finish) {
+        return '../assets/avatar/checked.jpg'
+      }
+      const from = request.from === 'Japão' ? 'Japao' : request.from
+      return `../assets/avatar/${from}.jpg`
+    },
+    getLabel (request) {
+      return `${request.info.fullName} - ${request.info.polo}`
+    },
+    getSubLabel (request) {
+      const type = request.type === 1 ? 'Solicitação de arte' : 'Material para imprensa'
+      return `${type} - ${request.protocolo}`
+    },
+    onCopyAction (request) {
+      return `Solicitado em ${this.dateTime(request.protocolo)} pelo polo ${request.info.polo} (${request.from}) com seu número de protocolo ${request.protocolo}, informações para contato:
+Nome completo: ${request.info.fullName}
+E-mail: ${request.info.email}
+Celular: ${request.info.phone}
 
-    seedData () {
-      let collection = this.$firebase.firestore().collection('todos')
+Perguntas/Respostas:
+${request.question[0].question}
+R: ${request.question[0].answer}
+${request.question[1].question}
+R: ${request.question[1].answer}
+${request.question[2].question}
+R: ${request.question[2].answer}
+${request.question[3].question}
+R: ${request.question[3].answer}
+${request.question[4].question}
+R: ${request.question[4].answer}
+${request.question[5].question}
+R: ${request.question[5].answer}
 
-      seedData.forEach(todo => {
-        collection.doc().set(todo).then(() => {
-          console.log('Created', todo.title)
-        }).catch(error => console.error(error))
-      })
-
-      this.getData()
+Observação:
+${request.note}
+`
+    },
+    dateTime (timeStamp) {
+      return date.formatDate(parseInt(timeStamp), 'DD/MM/YY [ás] h:mm')
     }
+  },
+  mounted () {
+    this.getAllRequests()
   }
 }
 </script>

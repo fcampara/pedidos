@@ -3,7 +3,7 @@
 
     <q-card class="card-request shadow-9" inline color="black">
       <q-card-media>
-        <img src="../../assets/photoBR.jpg">
+        <img src="../../assets/flag/photoBR.jpg" width="100%">
 
         <q-card-title slot="overlay" class="text-center">
           Request // Marketing EAD // Brasil
@@ -23,7 +23,7 @@ export default {
   name: 'RequestBrasil',
   methods: {
     redirect (type) {
-      this.$router.push({ path: 'artRequest', query: { from: 'brasil', type: type } })
+      this.$router.push({ path: 'artRequest', query: { from: 'Brasil', type: type } })
     }
   }
 }
