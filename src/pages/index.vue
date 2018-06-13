@@ -57,10 +57,10 @@ export default {
     },
     getAvatar (request) {
       if (request.finish) {
-        return '../assets/avatar/checked.jpg'
+        return './statics/avatar/checked.jpg'
       }
       const from = request.from === 'Japão' ? 'Japao' : request.from
-      return `../assets/avatar/${from}.jpg`
+      return `./statics/avatar/${from}.jpg`
     },
     getLabel (request) {
       return `${request.info.fullName} - ${request.info.polo}`
