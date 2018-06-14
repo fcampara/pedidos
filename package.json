@@ -1,6 +1,6 @@
 {
   "name": "unigranet-pedidos",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sistema de solicitação de artes",
   "productName": "Unigranet Pedidos de artes",
   "cordovaId": "org.cordova.quasar.app",

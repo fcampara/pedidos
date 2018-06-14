@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/js/1.bffa6b8c.js"
   },
   {
-    "revision": "a13b2bd5261e2df374128df1aab93001",
-    "url": "/statics/icons/icon-512x512.png"
+    "revision": "ed12d10fd0407eea42ccaf7af7991146",
+    "url": "/statics/icons/ms-icon-144x144.png"
   },
   {
     "revision": "96503c1f7d89f00bc714",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/js/11.324627c9.js"
   },
   {
-    "revision": "ed12d10fd0407eea42ccaf7af7991146",
-    "url": "/statics/icons/ms-icon-144x144.png"
+    "revision": "a13b2bd5261e2df374128df1aab93001",
+    "url": "/statics/icons/icon-512x512.png"
   },
   {
     "revision": "4206d56f93de6bbc9253",
@@ -68,56 +68,56 @@ self.__precacheManifest = [
     "url": "/statics/icons/icon-384x384.png"
   },
   {
-    "revision": "4c1a08ced1a4865e0a56",
-    "url": "/js/app.4c1a08ce.js"
-  },
-  {
-    "revision": "20c6420ccf16a07d9d56538e30a6b524",
-    "url": "/statics/icons/icon-256x256.png"
+    "revision": "bd33728d0f9ab8198d3c",
+    "url": "/js/app.bd33728d.js"
   },
   {
     "revision": "8c4120b4e88276badbc808e518572fad",
     "url": "/statics/icons/icon-192x192.png"
   },
   {
-    "revision": "3020c8ac2c2872dec7741e5948520093",
-    "url": "/statics/icons/icon-128x128.png"
+    "revision": "20c6420ccf16a07d9d56538e30a6b524",
+    "url": "/statics/icons/icon-256x256.png"
   },
   {
-    "revision": "b299316d0b95c3cf3335d3d3cca20720",
-    "url": "/statics/avatar/Japao.jpg"
+    "revision": "da2b422e2895b9b9c1782a71b6be9d63",
+    "url": "/statics/icons/apple-icon-152x152.png"
+  },
+  {
+    "revision": "3020c8ac2c2872dec7741e5948520093",
+    "url": "/statics/icons/icon-128x128.png"
   },
   {
     "revision": "2f9d7587924933c1912c342b190b53ca",
     "url": "/statics/icons/favicon-32x32.png"
   },
   {
-    "revision": "59ca5c65bd75a4c059fd",
-    "url": "/js/vendor.59ca5c65.js"
+    "revision": "427a2743ceec483933c1",
+    "url": "/js/vendor.427a2743.js"
   },
   {
     "revision": "b97b70f179ff0efb54e3",
     "url": "/js/2.b97b70f1.js"
   },
   {
-    "revision": "031a2f01a3a811690787cf563d3dc3f5",
-    "url": "/statics/avatar/Europa.jpg"
+    "revision": "b299316d0b95c3cf3335d3d3cca20720",
+    "url": "/statics/avatar/Japao.jpg"
   },
   {
     "revision": "efb00e57304380d857603760600da5d5",
     "url": "/statics/icons/favicon-16x16.png"
   },
   {
-    "revision": "a9604fef9207bb34c4b58e049e4dc50e",
-    "url": "/statics/avatar/Flórida.jpg"
-  },
-  {
     "revision": "6a327422e690b0a17aa5d7f8ad2ca570",
     "url": "/statics/avatar/checked.jpg"
   },
   {
-    "revision": "da2b422e2895b9b9c1782a71b6be9d63",
-    "url": "/statics/icons/apple-icon-152x152.png"
+    "revision": "a9604fef9207bb34c4b58e049e4dc50e",
+    "url": "/statics/avatar/Flórida.jpg"
+  },
+  {
+    "revision": "031a2f01a3a811690787cf563d3dc3f5",
+    "url": "/statics/avatar/Europa.jpg"
   },
   {
     "revision": "a2971d66fa4376a181a5b8688a6e615c",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/fonts/KFOlCnqEu92Fr1MmWUlfBBc-.cf6613d.woff"
   },
   {
-    "revision": "2c0d5e2d92be864e2f45c6af96cfe1f1",
+    "revision": "fe55d3bf2195a948f1742f1930fde1fc",
     "url": "/index.html"
   },
   {
@@ -172,7 +172,7 @@ self.__precacheManifest = [
     "url": "/fonts/KFOkCnqEu92Fr1MmgVxIIzQ.e9dbbe8.woff"
   },
   {
-    "revision": "4c1a08ced1a4865e0a56",
+    "revision": "bd33728d0f9ab8198d3c",
     "url": "/app.286e99f4.css"
   },
   {
@@ -184,7 +184,7 @@ self.__precacheManifest = [
     "url": "/12.d7d9e3fe.css"
   },
   {
-    "revision": "59ca5c65bd75a4c059fd",
-    "url": "/0.46f39b7d.css"
+    "revision": "427a2743ceec483933c1",
+    "url": "/0.dc136954.css"
   }
 ];
