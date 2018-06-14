@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/js/1.bffa6b8c.js"
   },
   {
-    "revision": "ed12d10fd0407eea42ccaf7af7991146",
-    "url": "/statics/icons/ms-icon-144x144.png"
+    "revision": "a13b2bd5261e2df374128df1aab93001",
+    "url": "/statics/icons/icon-512x512.png"
   },
   {
     "revision": "96503c1f7d89f00bc714",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/js/11.324627c9.js"
   },
   {
-    "revision": "a13b2bd5261e2df374128df1aab93001",
-    "url": "/statics/icons/icon-512x512.png"
+    "revision": "ed12d10fd0407eea42ccaf7af7991146",
+    "url": "/statics/icons/ms-icon-144x144.png"
   },
   {
     "revision": "4206d56f93de6bbc9253",
@@ -72,24 +72,24 @@ self.__precacheManifest = [
     "url": "/js/app.4c1a08ce.js"
   },
   {
-    "revision": "8c4120b4e88276badbc808e518572fad",
-    "url": "/statics/icons/icon-192x192.png"
-  },
-  {
     "revision": "20c6420ccf16a07d9d56538e30a6b524",
     "url": "/statics/icons/icon-256x256.png"
+  },
+  {
+    "revision": "8c4120b4e88276badbc808e518572fad",
+    "url": "/statics/icons/icon-192x192.png"
   },
   {
     "revision": "3020c8ac2c2872dec7741e5948520093",
     "url": "/statics/icons/icon-128x128.png"
   },
   {
-    "revision": "2f9d7587924933c1912c342b190b53ca",
-    "url": "/statics/icons/favicon-32x32.png"
+    "revision": "b299316d0b95c3cf3335d3d3cca20720",
+    "url": "/statics/avatar/Japao.jpg"
   },
   {
-    "revision": "da2b422e2895b9b9c1782a71b6be9d63",
-    "url": "/statics/icons/apple-icon-152x152.png"
+    "revision": "2f9d7587924933c1912c342b190b53ca",
+    "url": "/statics/icons/favicon-32x32.png"
   },
   {
     "revision": "59ca5c65bd75a4c059fd",
@@ -100,8 +100,8 @@ self.__precacheManifest = [
     "url": "/js/2.b97b70f1.js"
   },
   {
-    "revision": "b299316d0b95c3cf3335d3d3cca20720",
-    "url": "/statics/avatar/Japao.jpg"
+    "revision": "031a2f01a3a811690787cf563d3dc3f5",
+    "url": "/statics/avatar/Europa.jpg"
   },
   {
     "revision": "efb00e57304380d857603760600da5d5",
@@ -112,16 +112,16 @@ self.__precacheManifest = [
     "url": "/statics/avatar/Flórida.jpg"
   },
   {
-    "revision": "a2971d66fa4376a181a5b8688a6e615c",
-    "url": "/statics/avatar/Brasil.jpg"
-  },
-  {
-    "revision": "031a2f01a3a811690787cf563d3dc3f5",
-    "url": "/statics/avatar/Europa.jpg"
-  },
-  {
     "revision": "6a327422e690b0a17aa5d7f8ad2ca570",
     "url": "/statics/avatar/checked.jpg"
+  },
+  {
+    "revision": "da2b422e2895b9b9c1782a71b6be9d63",
+    "url": "/statics/icons/apple-icon-152x152.png"
+  },
+  {
+    "revision": "a2971d66fa4376a181a5b8688a6e615c",
+    "url": "/statics/avatar/Brasil.jpg"
   },
   {
     "revision": "cf6613d1adf490972c557a8e318e0868",
