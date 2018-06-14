@@ -1,4 +1,4 @@
-import Firebase from 'firebase/app'
+import firebase from 'firebase/app'
 
 export default {
   namespaced: true,
@@ -32,7 +32,7 @@ export default {
       let email = payload.email
       let password = payload.password
 
-      await Firebase.auth().signInWithEmailAndPassword(email, password)
+      await firebase.auth().signInWithEmailAndPassword(email, password)
         .then(user => {
           commit('SET_USER', user)
         })
@@ -44,8 +44,8 @@ export default {
     async register ({ commit }, payload) {
       let email = payload.email
       let password = payload.password
-
-      await Firebase.auth().createUserWithEmailAndPassword(email, password)
+      
+      await firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(user => {
           commit('SET_USER', user)
         })
@@ -55,7 +55,7 @@ export default {
     },
 
     async signOut ({ commit }) {
-      await Firebase.auth().signOut()
+      await firebase.auth().signOut()
         .then(() => {
           commit('SET_USER', {})
         })
