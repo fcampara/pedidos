@@ -7,7 +7,7 @@
           <q-card-title class="text-center">
             Solicitado em {{dateTime(request.protocolo)}}
             <span slot="subtitle">
-              <q-btn-group push class="full-width q-mt-md">
+              <q-btn-group push class="full-width q-mt-md shadow-6">
                 <q-btn v-clipboard="onCopyAction(request)" @success="handleSuccess" push color="primary" class="full-width" icon="file_copy" label="Copiar"/>
                 <q-btn @click="finish(request)" push color="positive" :disable="request.finish" class="full-width" icon="check" label="Finalizar"/>
                 <q-btn push color="negative" :disable="request.finish" class="full-width" icon="close" label="Cancelar"/>
@@ -70,7 +70,10 @@ export default {
       return `${type} - ${request.protocolo}`
     },
     onCopyAction (request) {
-      return `Solicitado em ${this.dateTime(request.protocolo)} pelo polo ${request.info.polo} (${request.from}) com seu número de protocolo ${request.protocolo}, informações para contato:
+      const type = request.type === 1 ? 'Solicitação de arte' : 'Material para imprensa'
+      return `${type}
+
+Solicitado em ${this.dateTime(request.protocolo)} pelo polo ${request.info.polo} (${request.from}) com seu número de protocolo ${request.protocolo}, informações para contato:
 Nome completo: ${request.info.fullName}
 E-mail: ${request.info.email}
 Celular: ${request.info.phone}

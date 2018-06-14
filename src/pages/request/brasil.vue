@@ -11,8 +11,8 @@
         </q-card-title>
       </q-card-media>
       <q-card-actions class="center text-center q-mt-md">
-        <q-btn @click="redirect(1)">Solicitação de arte</q-btn>
-        <q-btn @click="redirect(2)">Matéria para Imprensa</q-btn>
+        <q-btn color="white" text-color="black" push @click="redirect(1)">Solicitação de arte</q-btn>
+        <q-btn color="white" text-color="black" push @click="redirect(2)">Matéria para Imprensa</q-btn>
       </q-card-actions>
     </q-card>
 

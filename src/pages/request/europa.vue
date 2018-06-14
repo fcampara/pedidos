@@ -11,7 +11,7 @@
         </q-card-title>
       </q-card-media>
       <q-card-actions class="center text-center q-mt-md">
-        <q-btn @click="redirect(1)">Solicitação de arte</q-btn>
+        <q-btn color="white" text-color="black" push @click="redirect(1)">Solicitação de arte</q-btn>
       </q-card-actions>
     </q-card>
 

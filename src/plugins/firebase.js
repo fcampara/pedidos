@@ -1,5 +1,4 @@
 import firebase from 'firebase/app'
-import firestore from 'firebase/firestore' // eslint-disable-line
 import firebaseConfig from '../../firebase.conf'
 
 export default ({ Vue }) => {
