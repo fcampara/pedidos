@@ -38,12 +38,19 @@ export default {
         this.$axios({
             method: 'GET',
             url:'https://secure.runrun.it/api/v1.0/users',
+            mode: 'no-cors',
+            data: {
+                'email': 'mktdigital01.ead@unigran.br'
+            },
             headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:8080',
                 'App-Key': 'cf558497a61a597914b9338064582373',
                 'User-Token': 'qVGzUqKfgDm8w5DsQDB',
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache',
             },
+            withCredentials: true,
+            credentials: 'same-origin',
         }).then(response => {
             console.log(response)
         }).catch(error => {
