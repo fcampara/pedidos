@@ -56,36 +56,20 @@ self.__precacheManifest = [
     "url": "/js/11.55d4e7cb.js"
   },
   {
-    "revision": "20c6420ccf16a07d9d56538e30a6b524",
-    "url": "/statics/icons/icon-256x256.png"
+    "revision": "a13b2bd5261e2df374128df1aab93001",
+    "url": "/statics/icons/icon-512x512.png"
   },
   {
     "revision": "8a54559f29f03ed4600d",
     "url": "/js/12.8a54559f.js"
   },
   {
-    "revision": "a13b2bd5261e2df374128df1aab93001",
-    "url": "/statics/icons/icon-512x512.png"
-  },
-  {
-    "revision": "9b40a9921f432544d7a7",
-    "url": "/js/app.9b40a992.js"
-  },
-  {
     "revision": "66d7719a8ca03c1a591444c013802817",
     "url": "/statics/icons/icon-384x384.png"
   },
   {
-    "revision": "3020c8ac2c2872dec7741e5948520093",
-    "url": "/statics/icons/icon-128x128.png"
-  },
-  {
-    "revision": "da2b422e2895b9b9c1782a71b6be9d63",
-    "url": "/statics/icons/apple-icon-152x152.png"
-  },
-  {
-    "revision": "a9604fef9207bb34c4b58e049e4dc50e",
-    "url": "/statics/avatar/Flórida.jpg"
+    "revision": "3213663c16ba076740f1",
+    "url": "/js/app.3213663c.js"
   },
   {
     "revision": "8c4120b4e88276badbc808e518572fad",
@@ -96,28 +80,44 @@ self.__precacheManifest = [
     "url": "/statics/icons/favicon-32x32.png"
   },
   {
+    "revision": "20c6420ccf16a07d9d56538e30a6b524",
+    "url": "/statics/icons/icon-256x256.png"
+  },
+  {
     "revision": "efb00e57304380d857603760600da5d5",
     "url": "/statics/icons/favicon-16x16.png"
+  },
+  {
+    "revision": "da2b422e2895b9b9c1782a71b6be9d63",
+    "url": "/statics/icons/apple-icon-152x152.png"
   },
   {
     "revision": "b299316d0b95c3cf3335d3d3cca20720",
     "url": "/statics/avatar/Japao.jpg"
   },
   {
-    "revision": "c87ffef8186dfadea821",
-    "url": "/js/vendor.c87ffef8.js"
-  },
-  {
-    "revision": "502a96dd066c3755cb37",
-    "url": "/js/2.502a96dd.js"
-  },
-  {
-    "revision": "6a327422e690b0a17aa5d7f8ad2ca570",
-    "url": "/statics/avatar/checked.jpg"
+    "revision": "3020c8ac2c2872dec7741e5948520093",
+    "url": "/statics/icons/icon-128x128.png"
   },
   {
     "revision": "031a2f01a3a811690787cf563d3dc3f5",
     "url": "/statics/avatar/Europa.jpg"
+  },
+  {
+    "revision": "c87ffef8186dfadea821",
+    "url": "/js/vendor.c87ffef8.js"
+  },
+  {
+    "revision": "d398974375c6f4aedcb6",
+    "url": "/js/2.d3989743.js"
+  },
+  {
+    "revision": "a9604fef9207bb34c4b58e049e4dc50e",
+    "url": "/statics/avatar/Flórida.jpg"
+  },
+  {
+    "revision": "6a327422e690b0a17aa5d7f8ad2ca570",
+    "url": "/statics/avatar/checked.jpg"
   },
   {
     "revision": "a2971d66fa4376a181a5b8688a6e615c",
@@ -148,7 +148,7 @@ self.__precacheManifest = [
     "url": "/img/photoBR.67f522a.jpg"
   },
   {
-    "revision": "83f148c8036e8d674549b5dbe98f950c",
+    "revision": "366df9eb89fd7b1a9a6b8cc9412ccd57",
     "url": "/index.html"
   },
   {
@@ -196,7 +196,7 @@ self.__precacheManifest = [
     "url": "/fonts/KFOkCnqEu92Fr1MmgVxIIzQ.e9dbbe8.woff"
   },
   {
-    "revision": "9b40a9921f432544d7a7",
+    "revision": "3213663c16ba076740f1",
     "url": "/app.286e99f4.css"
   },
   {

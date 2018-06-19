@@ -43,7 +43,7 @@ export default {
                 'email': 'mktdigital01.ead@unigran.br'
             },
             headers: {
-                'Access-Control-Allow-Origin': 'http://localhost:8080',
+                'Access-Control-Allow-Origin': 'https://pedidos-unigran.herokuapp.com/',
                 'App-Key': 'cf558497a61a597914b9338064582373',
                 'User-Token': 'qVGzUqKfgDm8w5DsQDB',
                 'Content-Type': 'application/json',
