@@ -10,7 +10,7 @@
               <q-btn-group push class="full-width q-mt-md shadow-6">
                 <q-btn v-clipboard="onCopyAction(request)" @success="handleSuccess" push color="primary" class="full-width" icon="file_copy" label="Copiar"/>
                 <q-btn @click="finish(request)" push color="positive" :disable="request.finish" class="full-width" icon="check" label="Finalizar"/>
-                <q-btn push color="negative" :disable="request.finish" class="full-width" icon="close" label="Cancelar"/>
+                <q-btn @click="runrunit(request)" push color="negative" :disable="request.finish" class="full-width" icon="fa fa-cog" label="Runrun.it"/>
               </q-btn-group>
             </span>
           </q-card-title>
@@ -27,17 +27,29 @@
         </q-card>
       </q-collapsible>
     </q-list>
+    <runrunit :show="modal" :run="runrunData" @close="modal = $event"/>
   </q-page>
 </template>
 <script>
 import { date } from 'quasar'
 import { mapState, mapActions } from 'vuex'
+import runrunit from '../components/modal/runrunit.vue'
 
 export default {
   name: 'PageIndex',
+  components: {
+    runrunit
+  },
   data () {
     return {
       copyData: 'teste',
+      runrunData: {
+        info: {
+          fullName: '',
+          polo: ''
+        }
+      },
+      modal: false,
       selected: [],
       todos: []
     }
@@ -52,6 +64,10 @@ export default {
       'getAllRequests': 'request/getAllRequests',
       'finish': 'request/finish'
     }),
+    runrunit (data) {
+      this.runrunData = data
+      this.modal = true
+    },
     handleSuccess () {
       this.$q.notify({message: 'Copiado com sucesso', timeout: 2000, type: 'positive', color: 'positive'})
     },

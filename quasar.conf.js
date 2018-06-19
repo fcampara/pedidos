@@ -18,9 +18,8 @@ module.exports = function (ctx) {
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,
       'material-icons',
-      ctx.theme.ios ? 'ionicons' : null
-      // 'mdi',
-      // 'fontawesome'
+      ctx.theme.ios ? 'ionicons' : null,
+      'fontawesome'
     ],
     supportIE: false,
     build: {
@@ -51,6 +50,8 @@ module.exports = function (ctx) {
     framework: {
       i18n: 'pt-br',
       components: [
+        'QModalLayout',
+        'QModal',
         'QBtnGroup',
         'QCollapsible',
         'QTd',
@@ -101,7 +102,7 @@ module.exports = function (ctx) {
         'Notify',
         'Dialog'
       ],
-      iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
+      iconSet: 'fontawesome'
     },
     // animations: 'all' --- includes all animations
     animations: [
