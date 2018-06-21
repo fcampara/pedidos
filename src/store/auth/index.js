@@ -44,7 +44,7 @@ export default {
     async register ({ commit }, payload) {
       let email = payload.email
       let password = payload.password
-      
+
       await firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(user => {
           commit('SET_USER', user)

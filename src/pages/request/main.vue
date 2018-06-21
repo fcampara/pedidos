@@ -1,5 +1,5 @@
 <template>
-    <q-page class="flex flex-center">    
+    <q-page class="flex flex-center">
     <q-card inline class="card-request shadow-9">
       <q-card-title>
         Sistema de solicitação de artes da Unigranet
@@ -28,9 +28,9 @@
 export default {
   name: 'PageRequest',
   computed: {
-      protocolo () {
-        return this.$route.query.protocolo 
-      }
+    protocolo () {
+      return this.$route.query.protocolo
+    }
   }
 }
 </script>

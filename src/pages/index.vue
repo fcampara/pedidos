@@ -33,13 +33,10 @@
 <script>
 import { date } from 'quasar'
 import { mapState, mapActions } from 'vuex'
-import runrunit from '../components/modal/runrunit.vue'
+// import runrunit from '../components/modal/runrunit.vue'
 
 export default {
   name: 'PageIndex',
-  components: {
-    runrunit
-  },
   data () {
     return {
       copyData: 'teste',

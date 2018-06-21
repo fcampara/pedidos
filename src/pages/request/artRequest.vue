@@ -182,7 +182,7 @@ export default {
     groupOne: ['info.fullName', 'info.email', 'info.phone', 'info.polo']
   },
   methods: {
-  ...mapActions({'insert': 'request/saveRequest'}),
+    ...mapActions({'insert': 'request/saveRequest'}),
     async save () {
       this.saving = true
       this.protocolo = Date.now()
@@ -195,11 +195,11 @@ export default {
         type: this.$route.query.type,
         finish: false
       }
-      
+
       await this.insert(data).then(request => {
         this.showNotification(1)
         this.sendEmail(data)
-      }).catch(error => {
+      }).catch(() => {
         this.showNotification(0)
       })
     },
@@ -220,8 +220,8 @@ export default {
     },
     async sendEmail (data) {
       const text = this.text(data)
-      await this.$axios.post('https://pedidos-unigran.herokuapp.com:5000/send',{
-          data: text
+      await this.$axios.post('https://pedidos-unigran.herokuapp.com:5000/send', {
+        data: text
       }).then((resp) => {
         console.log(resp)
       }).catch((error) => {
@@ -229,7 +229,7 @@ export default {
       })
     },
     text (request) {
-       const type = request.type === 1 ? 'Solicitação de arte' : 'Material para imprensa'
+      const type = request.type === 1 ? 'Solicitação de arte' : 'Material para imprensa'
       return `${type}
 
 Solicitado em ${date.formatDate(parseInt(request.protocolo), 'DD/MM/YY [ás] HH:MM')} pelo polo ${request.info.polo} (${request.from}) com seu número de protocolo ${request.protocolo}, informações para contato:<br><br>

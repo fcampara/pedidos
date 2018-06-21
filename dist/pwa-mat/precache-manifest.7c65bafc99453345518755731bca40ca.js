@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/js/3.650e0a50.js"
   },
   {
-    "revision": "b9c508f8068e266cf17a",
-    "url": "/js/4.b9c508f8.js"
+    "revision": "58e8ebbf948d71296f25",
+    "url": "/js/4.58e8ebbf.js"
   },
   {
     "revision": "c25ef0b92812876e88b3",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/js/10.9a3ca273.js"
   },
   {
-    "revision": "dff0f1ad1763a2b33bac",
-    "url": "/js/11.dff0f1ad.js"
+    "revision": "72d36ddf5ee005db17e3",
+    "url": "/js/11.72d36ddf.js"
   },
   {
     "revision": "a13b2bd5261e2df374128df1aab93001",
@@ -64,64 +64,64 @@ self.__precacheManifest = [
     "url": "/js/12.8a54559f.js"
   },
   {
-    "revision": "20c6420ccf16a07d9d56538e30a6b524",
-    "url": "/statics/icons/icon-256x256.png"
-  },
-  {
-    "revision": "444706904db8d4a474eb",
-    "url": "/js/app.44470690.js"
-  },
-  {
     "revision": "66d7719a8ca03c1a591444c013802817",
     "url": "/statics/icons/icon-384x384.png"
+  },
+  {
+    "revision": "8756ffa475b50591c674",
+    "url": "/js/app.8756ffa4.js"
+  },
+  {
+    "revision": "20c6420ccf16a07d9d56538e30a6b524",
+    "url": "/statics/icons/icon-256x256.png"
   },
   {
     "revision": "8c4120b4e88276badbc808e518572fad",
     "url": "/statics/icons/icon-192x192.png"
   },
   {
-    "revision": "2f9d7587924933c1912c342b190b53ca",
-    "url": "/statics/icons/favicon-32x32.png"
+    "revision": "efb00e57304380d857603760600da5d5",
+    "url": "/statics/icons/favicon-16x16.png"
   },
   {
     "revision": "3020c8ac2c2872dec7741e5948520093",
     "url": "/statics/icons/icon-128x128.png"
   },
   {
-    "revision": "efb00e57304380d857603760600da5d5",
-    "url": "/statics/icons/favicon-16x16.png"
-  },
-  {
-    "revision": "b299316d0b95c3cf3335d3d3cca20720",
-    "url": "/statics/avatar/Japao.jpg"
+    "revision": "2f9d7587924933c1912c342b190b53ca",
+    "url": "/statics/icons/favicon-32x32.png"
   },
   {
     "revision": "da2b422e2895b9b9c1782a71b6be9d63",
     "url": "/statics/icons/apple-icon-152x152.png"
   },
   {
-    "revision": "031a2f01a3a811690787cf563d3dc3f5",
-    "url": "/statics/avatar/Europa.jpg"
+    "revision": "a9604fef9207bb34c4b58e049e4dc50e",
+    "url": "/statics/avatar/Flórida.jpg"
+  },
+  {
+    "revision": "b299316d0b95c3cf3335d3d3cca20720",
+    "url": "/statics/avatar/Japao.jpg"
   },
   {
     "revision": "c87ffef8186dfadea821",
     "url": "/js/vendor.c87ffef8.js"
   },
   {
-    "revision": "ca5af2ff0aaeb1836dae",
-    "url": "/js/2.ca5af2ff.js"
+    "revision": "53f0098db4bc609beeb8",
+    "url": "/js/2.53f0098d.js"
   },
   {
-    "revision": "a9604fef9207bb34c4b58e049e4dc50e",
-    "url": "/statics/avatar/Flórida.jpg"
-  },
-  {
-    "revision": "6a327422e690b0a17aa5d7f8ad2ca570",
-    "url": "/statics/avatar/checked.jpg"
+    "revision": "031a2f01a3a811690787cf563d3dc3f5",
+    "url": "/statics/avatar/Europa.jpg"
   },
   {
     "revision": "a2971d66fa4376a181a5b8688a6e615c",
     "url": "/statics/avatar/Brasil.jpg"
+  },
+  {
+    "revision": "6a327422e690b0a17aa5d7f8ad2ca570",
+    "url": "/statics/avatar/checked.jpg"
   },
   {
     "revision": "33f727ccde4b05c0ed143c5cd78cda0c",
@@ -148,7 +148,7 @@ self.__precacheManifest = [
     "url": "/img/photoBR.67f522a.jpg"
   },
   {
-    "revision": "2a0838a7c8915092a2a2b54de51b9b95",
+    "revision": "3f9e643b0eda5966bae048c64ae77433",
     "url": "/index.html"
   },
   {
@@ -196,7 +196,7 @@ self.__precacheManifest = [
     "url": "/fonts/KFOkCnqEu92Fr1MmgVxIIzQ.e9dbbe8.woff"
   },
   {
-    "revision": "444706904db8d4a474eb",
+    "revision": "8756ffa475b50591c674",
     "url": "/app.286e99f4.css"
   },
   {
