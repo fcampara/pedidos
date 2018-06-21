@@ -2,20 +2,20 @@ const
   express = require('express'),
   serveStatic = require('serve-static'),
   history = require('connect-history-api-fallback'),
-  bodyParser = require('body-parser'),
-  nodemailer = require('nodemailer'),
+  // bodyParser = require('body-parser'),
+  // nodemailer = require('nodemailer'),
   port = process.env.PORT || 5000
 
 const app = express()
 
 // Add headers
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://pedidos-unigran.herokuapp.com')
-  res.setHeader('Access-Control-Allow-Methods', 'POST')
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
-  res.setHeader('Access-Control-Allow-Credentials', true)
-  next()
-})
+// app.use(function (req, res, next) {
+//   res.setHeader('Access-Control-Allow-Origin', 'https://pedidos-unigran.herokuapp.com')
+//   res.setHeader('Access-Control-Allow-Methods', 'POST')
+//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
+//   res.setHeader('Access-Control-Allow-Credentials', true)
+//   next()
+// })
 
 app.use(history())
 app.use(serveStatic(`${__dirname}/dist/pwa-mat`))

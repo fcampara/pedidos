@@ -130,7 +130,7 @@
             </p>
 
             <q-stepper-navigation>
-                <q-btn :loading="saving" color="secondary" @click="save()">Solicitar pedido</q-btn>
+                <q-btn :loading="saving" color="secondary" @click.stop.prevent="save()">Solicitar pedido</q-btn>
             </q-stepper-navigation>
             </q-step>
 
@@ -220,7 +220,7 @@ export default {
     },
     async sendEmail (data) {
       const text = this.text(data)
-      await this.$axios.post('https://us-central1-unet-83ce3.cloudfunctions.net/enviarEmail', {
+      await this.$axios.post('https://us-central1-unet-83ce3.cloudfunctions.net/sendMail', {
         data: text
       }).then((resp) => {
         console.log(resp)
