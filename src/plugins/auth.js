@@ -8,7 +8,7 @@ export default ({ app, router, Vue, store }) => {
     let isAuthenticated = firebase.auth().currentUser !== null
 
     if (authRequired) {
-      isAuthenticated ? next() : next({ name: 'signIn' })
+      isAuthenticated ? next() : next({ name: 'Home' })
     } else {
       next()
     }

@@ -56,7 +56,6 @@ export default {
   },
   methods: {
     signIn () {
-      console.log(this.$v.form.$touch())
       let credentials = {
         email: this.form.email,
         password: this.form.password

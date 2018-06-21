@@ -21,7 +21,6 @@ export const request = {
       await db.collection('request').doc(payload.id).update({
         finish: true
       }).then(() => {
-        console.log('Atualizado com sucesso')
       }).catch((err) => {
         console.error(err)
       })

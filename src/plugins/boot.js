@@ -3,7 +3,6 @@ import 'firebase/auth'
 
 export default ({ app, router, Vue, store }) => {
   // Register the Firebase authentication listener
-  console.log(firebase)
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
       // Signed in. Let Vuex know.

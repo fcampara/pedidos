@@ -141,6 +141,8 @@
   </q-page>
 </template>
 <script>
+import { date } from 'quasar'
+import { mapActions } from 'vuex'
 import { required, email } from 'vuelidate/lib/validators'
 import question from '../../../data/question'
 
@@ -180,9 +182,7 @@ export default {
     groupOne: ['info.fullName', 'info.email', 'info.phone', 'info.polo']
   },
   methods: {
-    log () {
-      console.log(this.question)
-    },
+  ...mapActions({'insert': 'request/saveRequest'}),
     async save () {
       this.saving = true
       this.protocolo = Date.now()
@@ -195,13 +195,12 @@ export default {
         type: this.$route.query.type,
         finish: false
       }
-
-      this.$store.dispatch('request/saveRequest', data).then(request => {
-        console.log('Salvo com sucesso!')
+      
+      await this.insert(data).then(request => {
         this.showNotification(1)
+        this.sendEmail(data)
       }).catch(error => {
         this.showNotification(0)
-        console.error(error)
       })
     },
     showNotification (type) {
@@ -215,14 +214,49 @@ export default {
           color: 'positive',
           ok: true
         }).then(() => {
-            
-          this.$router.push({ path: 'home', query: { protocolo: this.protocolo } })
+        //   this.$router.push({ path: 'home', query: { protocolo: this.protocolo } })
         })
       }
+    },
+    async sendEmail (data) {
+      const text = this.text(data)
+      await this.$axios.post('http://localhost:5000/send',{
+          data: text
+      }).then((resp) => {
+        console.log(resp)
+      }).catch((error) => {
+        console.error(error)
+      })
+    },
+    text (request) {
+       const type = request.type === 1 ? 'Solicitação de arte' : 'Material para imprensa'
+      return `${type}
+
+Solicitado em ${date.formatDate(parseInt(request.protocolo), 'DD/MM/YY [ás] HH:MM')} pelo polo ${request.info.polo} (${request.from}) com seu número de protocolo ${request.protocolo}, informações para contato:<br><br>
+Nome completo: ${request.info.fullName}<br>
+E-mail: ${request.info.email}<br>
+Celular: ${request.info.phone}<br><br>
+
+Perguntas/Respostas:<br>
+${request.question[0].question}<br>
+R: ${request.question[0].answer}<br>
+${request.question[1].question}<br>
+R: ${request.question[1].answer}<br>
+${request.question[2].question}<br>
+R: ${request.question[2].answer}<br>
+${request.question[3].question}<br>
+R: ${request.question[3].answer}<br>
+${request.question[4].question}<br>
+R: ${request.question[4].answer}<br>
+${request.question[5].question}<br>
+R: ${request.question[5].answer}<br>
+
+Observação:<br><br>
+${request.note}
+`
     }
   },
   mounted () {
-
   }
 }
 </script>

@@ -10,7 +10,7 @@
               <q-btn-group push class="full-width q-mt-md shadow-6">
                 <q-btn v-clipboard="onCopyAction(request)" @success="handleSuccess" push color="primary" class="full-width" icon="file_copy" label="Copiar"/>
                 <q-btn @click="finish(request)" push color="positive" :disable="request.finish" class="full-width" icon="check" label="Finalizar"/>
-                <q-btn @click="runrunit(request)" push color="negative" :disable="request.finish" class="full-width" icon="fa fa-cog" label="Runrun.it"/>
+                <q-btn @click="runrunit(request)" push color="negative" :disable="true" class="full-width" icon="fa fa-cog" label="Runrun.it"/>
               </q-btn-group>
             </span>
           </q-card-title>
@@ -113,7 +113,7 @@ ${request.note}
 `
     },
     dateTime (timeStamp) {
-      return date.formatDate(parseInt(timeStamp), 'DD/MM/YY [ás] h:mm')
+      return date.formatDate(parseInt(timeStamp), 'DD/MM/YY [ás] HH:MM')
     }
   },
   mounted () {

@@ -10,7 +10,6 @@ export default ({ Vue }) => {
   firebase.firestore().settings({ timestampsInSnapshots: true })
 
   firebase.firestore().enablePersistence().then(() => {
-    console.log('Tentando ativar persistência...')
   }).catch(err => {
     switch (err) {
       case 'failed-precondition':
