@@ -220,7 +220,7 @@ export default {
     },
     async sendEmail (data) {
       const text = this.text(data)
-      await this.$axios.post('https://pedidos-unigran.herokuapp.com:5000/send', {
+      await this.$axios.post('https://us-central1-unet-83ce3.cloudfunctions.net/enviarEmail', {
         data: text
       }).then((resp) => {
         console.log(resp)
