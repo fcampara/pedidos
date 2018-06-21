@@ -214,7 +214,7 @@ export default {
           color: 'positive',
           ok: true
         }).then(() => {
-        //   this.$router.push({ path: 'home', query: { protocolo: this.protocolo } })
+            this.$router.push({ path: 'home', query: { protocolo: this.protocolo } })
         })
       }
     },

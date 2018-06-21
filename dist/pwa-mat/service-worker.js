@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.d05e89b1b7c684c7fbb0c842bdc07dfd.js"
+  "/precache-manifest.d350c1f520331c89c8752c80a3c30375.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "unigranet-pedidos"});
