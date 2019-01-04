@@ -2,7 +2,7 @@
     <q-page class="flex flex-center">
     <q-card inline class="card-request shadow-9">
       <q-card-title>
-        Sistema de solicitação de artes da Unigranet
+        Sistema de solicitação de artes
         <span v-if="protocolo" slot="subtitle">Protocolo: {{protocolo}}</span>
       </q-card-title>
       <q-card-main>

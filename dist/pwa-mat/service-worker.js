@@ -17,7 +17,7 @@ importScripts(
   "/precache-manifest.d350c1f520331c89c8752c80a3c30375.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "unigranet-pedidos"});
+workbox.core.setCacheNameDetails({prefix: "pedidos"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

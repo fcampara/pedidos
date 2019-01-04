@@ -115,7 +115,7 @@ module.exports = function (ctx) {
       manifest: {
         name: 'Solicitação de artes',
         short_name: 'Artes',
-        description: 'Unigranet sempre facilitando!',
+        description: 'Marketing sempre facilitando!',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

@@ -1,8 +1,8 @@
 {
-  "name": "unigranet-pedidos",
+  "name": "pedidos",
   "version": "1.0.2",
   "description": "Sistema de solicitação de artes",
-  "productName": "Unigranet Pedidos de artes",
+  "productName": "Pedidos de artes",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Felipe Campara Silva <fcamparasilva@gmail.com>",
   "private": true,

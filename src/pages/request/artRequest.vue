@@ -126,7 +126,7 @@
                 Lembrando que você é responsável por conseguir passar tudo de forma clara e detalhada.
                 Com essas informações a Criação pode executar todo o job seguindo os itens respondidos anteriormente.
                 A entrega do job ocorrerá a partir de três dias após o envio destas informações, com retorno via e-mail.
-                A equipe de MARKETING da UNIGRAN NET agradece sua cooperação!
+                A equipe de MARKETING agradece sua cooperação!
             </p>
 
             <q-stepper-navigation>
@@ -214,7 +214,7 @@ export default {
           color: 'positive',
           ok: true
         }).then(() => {
-            this.$router.push({ path: 'home', query: { protocolo: this.protocolo } })
+          this.$router.push({ path: 'home', query: { protocolo: this.protocolo } })
         })
       }
     },

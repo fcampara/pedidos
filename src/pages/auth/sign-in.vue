@@ -3,9 +3,6 @@
   <q-page class="flex flex-center">
 
     <q-card class="card-sign-in q-pa-md shadow-9 col-auto" inline color="white">
-      <q-card-media class="q-pa-md justfy">
-        <img src="../../assets/unigran-net.png" style=""/>
-      </q-card-media>
       <form @submit.prevent="signIn()">
         <q-card-main>
           <q-field icon="email" icon-color="light" class="q-mt-md">

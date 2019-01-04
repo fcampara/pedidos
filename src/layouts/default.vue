@@ -7,7 +7,7 @@
         </q-btn> -->
 
         <q-toolbar-title>
-          Pedidos Unigran Net
+          Pedidos
         </q-toolbar-title>
          <q-btn class="shadow-6" color="white" text-color="black" icon="exit_to_app" label="Sair" @click.native="signOut()"/>
       </q-toolbar>
